@@ -32,6 +32,8 @@ After building, run the app with:
 ./dist/Coordimotion
 ```
 
+You can download the executable [here](https://cloud.isir.upmc.fr/s/GNb84QkZ3acRTz2)
+
 ## References
 
 - [Coordination Metrics Toolbox](https://github.com/oceanedbs/CoordinationMetricsToolbox)
