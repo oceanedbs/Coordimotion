@@ -1,0 +1,42 @@
+<HomeView>:
+    file_label_ref:file_label_ref
+    file_label_comp:file_label_comp
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            id: file_label_ref
+            text: "No file selected"
+            font_size: 20
+            color: 0, 0, 0, 1  # RGBA for black
+            size_hint_y: None
+            height: self.texture_size[1] + 20
+        Button:
+            text: "Select the Video for the\nReference Movement"
+            size_hint: 0.8, 0.3
+            padding: 10, 10
+            background_color: 73/255, 199/255, 225/255, 0.8  # RGBA
+            pos_hint: {"center_x": 0.5}
+            on_press: root.open_file_picker_ref()
+        Label:
+            id: file_label_comp 
+            text: "No file selected"
+            color: 0, 0, 0, 1  # RGBA for black
+            font_size: 20
+            size_hint_y: None
+            height: self.texture_size[1] + 20
+        Button:
+            text: "Select the Video for the\n Compared Movement"
+            size_hint: 0.8, 0.3
+            padding: 10, 10
+            pos_hint: {"center_x": 0.5}
+            background_color: 73/255, 199/255, 225/255, 0.8  # RGBA
+            on_press: root.open_file_picker_comp()
+        Widget:
+            size_hint_y: None
+            height: 20
+        Button:
+            text: "Extract Angles"
+            size_hint: 0.8, 0.2
+            padding: 30, 30
+            pos_hint: {"center_x": 0.5}
+            on_press: root.extract_angles()
